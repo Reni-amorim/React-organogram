@@ -1,5 +1,6 @@
-import CampoTexto from '../CampoTexto';
-import ListaSuspensa from '../ListaSuspensa';
+import Botao from '../Botao'
+import CampoTexto from '../CampoTexto'
+import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
 const Formulario = () => {
@@ -14,14 +15,21 @@ const Formulario = () => {
         'Inovação e Gestão'
     ]
 
+const aoSalvar = (evento) => {
+    evento.preventDefault()
+    console.log('Salvando card...')
+    // Adicione a lógica para salvar o card no banco de dados
+}
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h2> Prencha os dados para criar o card do colaborador </h2>
-                <CampoTexto label="Nome" placeholder="Digite seu nome"/>
-                <CampoTexto label="Cargo" placeholder="Digite seu cargo"/>
+                <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite seu nome"/>
+                <CampoTexto obrigatorio={true} label="Cargo" placeholder="Digite seu cargo"/>
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem"/>
-                <ListaSuspensa itens="{times}"/>
+                <ListaSuspensa obrigatorio={true} label="Time" itens={times}/>
+                <Botao texto="Criar Card"/>
             </form>
         </section>
     )
