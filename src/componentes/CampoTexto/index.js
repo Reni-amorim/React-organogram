@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './CampoTexto.css'
 const CampoTexto = (props) => {
     
@@ -9,7 +8,7 @@ const CampoTexto = (props) => {
     }
 
     //const [valor, setValor] = useState('')
-//
+    //
     //const digitado = (e) => {
     //    setValor(e.target.value)
     //    console.log(valor)
