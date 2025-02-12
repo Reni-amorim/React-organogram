@@ -47,7 +47,7 @@ function App() {
   const [colabs, setColabs] = useState([])
 
   const newColabAdd = (colab) => {
-//    setcolabs([...colabs, colab])
+debugger//    setcolabs([...colabs, colab])
     console.log(colab)
     setColabs([...colabs, colab])
 }

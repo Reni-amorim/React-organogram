@@ -12,7 +12,7 @@ const Time = (props) => {
         (props.colabs && props.colabs.length > 0) ? <section className='time' style={{ backgroundColor: props.corSecundaria}}>
             <h3 style={{ borderColor: props.corPrimaria}}>{props.nome}</h3>
                 <div className='colabs'>
-                    {props.colabs.map( colab => <Colab nome={colab.nome} cargo={colab.cargo} imagem={colab.imagem} />)}
+                    {props.colabs.map( colab => <Colab key={colab.nome} corDeFundo={props.corPrimaria} nome={colab.nome} cargo={colab.cargo} imagem={colab.imagem} />)}
                 </div>
         </section>
         : '' 
